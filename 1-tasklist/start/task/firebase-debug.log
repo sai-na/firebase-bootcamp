@@ -1,0 +1,21 @@
+[debug] [2023-04-14T12:27:36.379Z] ----------------------------------------------------------------------
+[debug] [2023-04-14T12:27:36.383Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\saipk\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-04-14T12:27:36.385Z] CLI Version:   11.14.4
+[debug] [2023-04-14T12:27:36.385Z] Platform:      win32
+[debug] [2023-04-14T12:27:36.386Z] Node Version:  v16.13.2
+[debug] [2023-04-14T12:27:36.387Z] Time:          Fri Apr 14 2023 17:57:36 GMT+0530 (India Standard Time)
+[debug] [2023-04-14T12:27:36.388Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-14T12:27:36.402Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-14T12:27:36.403Z] > authorizing via signed-in user (saipkmm100@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\saipk\OneDrive\projects\QuickClass\firebase-bootcamp\1-tasklist\start\task
+

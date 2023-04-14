@@ -52,7 +52,7 @@ function App() {
       querySnapshot.forEach((doc) => {
         todosArr.push({ ...doc.data(), id: doc.id })
       })
-      console.log(todosArr)
+      //console.log(todosArr)
       setTodos(todosArr)
     })
     return () => unsubscribe()
@@ -99,7 +99,7 @@ function App() {
             onChange={(e) => setInput(e.target.value)}
             className={style.input}
             type='text'
-            placeholder='Add Todo'
+            placeholder='Add task'
           />
           <button className={style.button}>
             <AiOutlinePlus size={30} />
@@ -115,6 +115,7 @@ function App() {
             />
           ))}
         </ul>
+
         {todos.length < 1 ? null : (
           <p className={style.count}>{`You have ${todos.length} todos`}</p>
         )}

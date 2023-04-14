@@ -1,30 +1,54 @@
-import Todo from './Todo'
-import { useEffect } from "react"
+import Task from './Task'
+import { useEffect, useState } from "react"
 import { MdAdd } from 'react-icons/md'
+// import database  
+import { db } from './firebase'
+import {
+  query,
+  collection,
+  onSnapshot,
+
+} from 'firebase/firestore'
+
 function App() {
 
 
   // states ,  input & task
 
-  // Create todo
+  const [tasks, setTasks] = useState([])
+
+  // Create task
 
 
-  // Read todo from firebase
+  // Read task from firebase
   useEffect(() => {
+    const q = query(collection(db, 'tasks'))
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      console.log(querySnapshot)
+      let tasksArr = []
+      querySnapshot.forEach((doc) => {
+        tasksArr.push({ ...doc.data(), id: doc.id })
+      })
+      //console.log(todosArr)
+      setTasks(tasksArr)
+    })
 
 
     return () => {
-
+      unsubscribe()
     }
+
+
+
   }, [])
 
 
 
-  // Update todo in firebase
+  // Update task in firebase
 
 
 
-  // Delete todo
+  // Delete task
 
 
 
@@ -39,17 +63,23 @@ function App() {
 
             className="border-2 border-gray-300 p-2 w-full text-xl focus:outline-none focus:border-sky-600 rounded"
             type='text'
-            placeholder='Add Todo'
+            placeholder='Add task'
           />
           <button className="border-2 border-transparent px-4 py-2 bg-gradient-to-r from-orange-400 to-rose-400  transition-colors duration-200">
             <MdAdd className='text-white' size={30} />
           </button>
         </form>
-        <ul>
-          {/* <Todo
-          /> */}
+        < ul >
+          {
+            tasks.map((task) => (
 
-        </ul>
+              < Task task={task} />
+              // console.log(task.text, task.completed)
+
+
+            ))
+          }
+        </ul >
 
         <p className="text-center p-2 text-gray-600">{`You have 2 tasks `}</p>
 
