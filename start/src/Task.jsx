@@ -7,16 +7,16 @@ import { FaRegTrashAlt } from 'react-icons/fa'
 // p className  =  {`ml-2 cursor-pointer ${task.completed ? "line-through" : ""}`}
 
 
-const Task = ({ task, toggleComplete, deleteTask }) => {
+const Task = ({ }) => {
   return (
-    <li className={`flex justify-between p-4 my-2 capitalize ${task.completed ? "bg-slate-200" : "bg-slate-400"}`}>
+    <li className={""}>
       <div className="flex">
-        <input onChange={() => toggleComplete(task)} type='checkbox' checked={task.completed ? "checked" : ""} />
-        <p onClick={() => toggleComplete(task)} className={`ml-2 cursor-pointer ${task.completed ? "line-through" : ""}`}>
-          {task.text}
+        <input onChange={""} type='checkbox' checked={""} />
+        <p onClick={""} className={""}>
+
         </p>
       </div>
-      <button onClick={() => deleteTask(task)}>{<FaRegTrashAlt />}</button>
+      <button onClick={""}>{<FaRegTrashAlt />}</button>
     </li>
   )
 }
